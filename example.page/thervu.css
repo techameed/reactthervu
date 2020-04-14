@@ -1,0 +1,223 @@
+
+.outline1{
+    background-color: #00c4cc;
+    color: black;
+    height: 50px;
+}
+.outline{
+    color: black;
+    height: 55px;
+}
+
+.image{
+    width: 40px;
+    height: 40px;
+    margin: 10px 0px 5px 10px;
+}
+
+.image1{
+    width: 40px;
+    height: 40px;
+    margin: 0px 0px 0px 910px;
+}
+
+.heading{
+    margin: -40px 0px 9px 70px;
+    font-family:courier,arial,helvetica;
+    font-weight: bold;
+}
+
+.ex1{
+    float: right;
+    font-size:17px;
+    margin: 15px 40px 0px 20px;
+    border: 1px solid black;
+    display: block;
+    position: relative;
+    border-radius:8px ;
+    border: 1px solid #00c4cc;
+    background-color: #00c4cc;
+    color: white;
+}
+
+.ex2{
+    font-family:courier,arial,helvetica;
+    margin: 10px 0px 0px 15px;
+    padding-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.ex1:hover{
+    color:black;
+}
+
+.ex3:hover {
+    color:black;
+}
+
+.ex4:hover {
+    color:black;
+}
+
+.ex5:hover {
+    color:black;
+}
+
+.ex3{
+    padding-left: 10px;
+}
+
+.ex4{
+    padding-left: 30px;
+}
+
+.ex5{
+    padding-left: 40px;
+}
+
+ul.list{
+    display: flex;
+    list-style: outside none none;
+    font-family:courier,arial,helvetica;
+    margin: 10px 0px 0px 15px;
+    padding-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.head-content{
+    text-align: center;
+    font-weight: bold;
+    font-family:courier,arial,helvetica;
+}
+
+.ex6{
+
+    margin: 15px 0px 0px 500px;
+    border: 2px solid lightgray;
+    font-size: 16px;
+    color: grey;
+    padding: 0px 0px 0px 10px;
+    border-radius:12px ;
+    outline: none;
+}
+
+.ex7{
+    margin: 0px 0px 0px 15px;
+    font-size: 16px;
+    background-color:#00c4cc;
+    color: white;
+    width:100px;
+    font-weight: bold;
+    border-radius:12px ;
+    font-weight: bold;
+    outline: none;
+    border-width: 0;
+
+}
+
+.ex7:hover{
+    color: black;
+}
+
+.ex8 {
+    font-family: courier,arial,helvetica;
+    border-collapse: collapse;
+    width: 40%;
+    margin: 40px 0px 0px 400px;
+    text-align: center;
+}
+
+ .ex9 {
+    border: 1px solid #dddddd;
+    text-align: ce;
+    padding: 8px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .ex10:hover {
+    background-color: #dddddd;
+  }
+
+  .ex11{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 18px;
+
+  }
+
+  .material-icons{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+  }
+
+  .edit{
+    color: #FFC107;
+  }
+
+  .delete{
+    color: #E34724;
+    text-align: center;
+  }
+
+  .backColor{
+    background-color:#00c4cc;
+    color: white;
+    font-weight: bold;
+  }
+
+  .backColor:hover{
+    color: black;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  #zoom:hover {
+    transform: scale(1.5);
+  }
