@@ -1,0 +1,73 @@
+.header{
+  width: 100%;
+  background-color: #2980B9;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  position: fixed;
+  top: 0;
+  height: 43px;
+  overflow-x: hidden;
+}
+.side-drawer{
+  width: 15%;
+  height: 3rem;
+  position: fixed;
+  left:0.5%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.4% 0% 0% 1%;
+}
+.nav-bar{
+  width: 85%;
+  height: 3rem;
+  position: fixed;
+  left: 15.45%;
+  display: flex;
+  justify-content: flex-start;
+  transform: translateX(0);
+  transition: 1s ease-in-out;
+  padding: 0.3% 0% 0% 0%;
+}
+.open{
+  transform: translateX(-16%);
+  position: fixed;
+  left: 20%;
+  width:95%;
+}
+.logo-content{
+  width: 20%;
+  height:90%;
+}
+.thervu-logo{
+  margin-top: 9%;
+  color: #ffffff;
+}
+.hamburger{
+    height:80%;
+}
+.hamburger-logo{
+  margin-top: 29%;
+  color: #ffffff;
+}
+.hamburger:hover{
+  cursor: pointer;
+  outline: none;
+  background-color: rgb(59, 128, 255);
+}
+.project-name-content{
+  font-size: 150%;
+  font-weight: bolder;
+  transform: translateX(0);
+  transition: 1s ease-in-out;
+}
+.close{
+  transform: translateX(-160%);
+  opacity: 0;
+  width: 0%;
+}
+.user-name{
+  position: fixed;  
+  right:0;
+  margin: 0.4% 4% 0% 0%;  
+}
