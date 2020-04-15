@@ -7,10 +7,9 @@ const ProtectedRoute = ({ component: Component, role, path, ...rest}) => {
         const index = permission.role.indexOf(path);
         return (index !== -1)
     }
-    const isAllowed = validatePath();
     return (
         <Route path={path} {...rest} render={props => {
-            return isAllowed ? <Component {...props}/> : <Redirect to="/" />;
+            return validatePath() ? <Component {...props}/> : <Redirect to="/" />;
         }}/>
     );
 }
