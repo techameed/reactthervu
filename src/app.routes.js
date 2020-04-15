@@ -5,11 +5,7 @@ import { Redirect, Route } from "react-router-dom";
 const ProtectedRoute = ({ component: Component, role, path, ...rest}) => {
     const validatePath = (path) => {
         const index = permission.role.indexOf(path);
-        if(index !== -1) {
-            return true;
-        } else {
-            return false;
-        }
+        return (index !== -1)
     }
     const isAllowed = validatePath();
     return (
