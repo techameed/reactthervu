@@ -1,32 +1,27 @@
 import React from 'react';
-import './header.css';
+import classes from './header.css';
 import Assignment from '@material-ui/icons/Assignment';
 import Hamburger from '@material-ui/icons/Menu';
 
-const header = props =>{
+const header = props => {
   
-  let projectNameClassName = ["project-name-content"];
-  let navBarClassName = ["nav-bar"];
-  if (props.isClosesideDrawer) {
-      projectNameClassName.push("close");
-      navBarClassName.push("open");
-  }
+  const { isCloseSideDrawer, onChangeSideDrawer, userName } = props;
   return(
-    <div className="header">
-      <div className="side-drawer">
-        <div className="logo-content">
-          <Assignment style={{ fontSize: "190%" }} className="thervu-logo" /> 
+    <div className={classes['header']}>
+      <div className={classes['side-drawer']}>
+        <div className={classes['logo-content']}>
+          <Assignment style={{ fontSize: '190%' }} className={classes['thervu-logo']}  /> 
         </div> 
-        <div className={projectNameClassName.join(" ")}>
+        <div className={`${classes['project-name-content']} ${isCloseSideDrawer ? classes['close'] : ''}`}>
           THERVU
         </div>
       </div>  
-      <div className={navBarClassName.join(" ")}>
-        <div className="hamburger" onClick={props.onChangeSideDrawerHandler}>
-          <Hamburger style={{ fontSize: "140%" }} className="hamburger-logo" />
+      <div className={`${classes['nav-bar']} ${isCloseSideDrawer ? classes['open'] : ''}`}>
+        <div className={classes['hamburger-content']} onClick={onChangeSideDrawer}>
+          <Hamburger style={{ fontSize: '190%' }} className={classes['hamburger-logo']}/>
         </div>
-        <div className="user-name">
-          {props.userName}
+        <div className={classes['user-name']}>
+          {userName}
         </div>
       </div> 
     </div>
