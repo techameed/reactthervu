@@ -6,7 +6,7 @@ const menus = (props) => {
         
     return(
          props.role.map(tab =>(
-         <div className= {classes.menu}>
+         <div className= { classes.menu }>
            <tab.icon className= {classes.menu_icon}/>
             <span className= {classes.sidebar_menus}>
               {tab.name }
