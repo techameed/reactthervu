@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { FaRegEye, FaDatabase } from "react-icons/fa";
 import { IoIosLogOut, IoIosSettings, } from "react-icons/io";
 import { GoChevronLeft } from "react-icons/go";
@@ -9,7 +9,9 @@ import SideMenus from "../Menu/SideMenus.js";
 
 
 class SideDrawer extends Component {
+ 
   constructor() {
+   
     super();
     this.state = {
       admin: [
@@ -34,18 +36,37 @@ class SideDrawer extends Component {
     };
   }
 
-  showMenu = () => {
-    this.setState({ showmenu: !this.state.showmenu }
+  showMenu = () => this.setState({ showmenu: !this.state.showmenu});
+  
+  collapsiveMenus = () => {
+    
+    return (
+      <>
+        {
+          this.state.showmenu 
+          ? 
+            <div className={classes.dropdown_content}>
+              <ul>
+                <li><a href="#course">Course</a></li>
+                <li><a href="#source">Evaluation Parameter</a></li>
+                <li><a href="#evaluator">Evaluator</a></li>
+                <li><a href="#source">Trainee</a></li>
+              </ul>
+            </div>
+          : 
+            ''  
+        }
+      </>
     );
   }
 
   render() {
 
-    const user = this.state.user;
+    const {user} = this.state;
 
     return (
       <div className={classes.drawer}>
-        
+
         {
           user === 'admin' && (
             <>
@@ -57,24 +78,7 @@ class SideDrawer extends Component {
                                     onClick={this.showMenu} />
                   </span>
               </div>
-
-              {
-                this.state.showmenu
-                  ? (
-                    <div className={classes.dropdown_content}>
-                      <ul >
-                        <li><a href="#course">Course</a></li>
-                        <li><a href="#source">Evaluation Parameter</a></li>
-                        <li><a href="#evaluator">Evaluator</a></li>
-                        <li><a href="#source">Trainee</a></li>
-                      </ul>
-                    </div>
-                  )
-                  : (
-                    console.log("Sub-menu rendering is failed")
-                  )
-              }
-              
+              {this.collapsiveMenus()}
             </>
           )
         }
