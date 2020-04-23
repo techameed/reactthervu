@@ -8,20 +8,21 @@ class App extends Component {
     this.state = {
       isCloseSideDrawer : false
     }
+    this.onToggleSideDrawer = this.onToggleSideDrawer.bind(this);
   }
   
-  onChangeSideDrawer = () => {
-    this.setState(state => ({
-      isCloseSideDrawer : !state.isCloseSideDrawer
+  onToggleSideDrawer() {
+    this.setState(previousState => ({
+      isCloseSideDrawer : !previousState.isCloseSideDrawer
     }));
   }
 
-  render = () => {
+  render() {
     return (
       <div className={classes['app']}>
-       <Header 
-         isCloseSideDrawer={this.state.isCloseSideDrawer} 
-         onChangeSideDrawer={this.onChangeSideDrawer} />
+        <Header 
+          isCloseSideDrawer={this.state.isCloseSideDrawer} 
+          onToggleSideDrawer={this.onToggleSideDrawer} />
       </div>
     );
   }

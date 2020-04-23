@@ -5,7 +5,7 @@ import Hamburger from '@material-ui/icons/Menu';
 
 const header = props => {
   
-  const { isCloseSideDrawer, onChangeSideDrawer, userName } = props;
+  const { isCloseSideDrawer, onToggleSideDrawer, userName } = props;
   return(
     <div className={classes['header']}>
       <div className={classes['side-drawer']}>
@@ -17,7 +17,7 @@ const header = props => {
         </div>
       </div>  
       <div className={`${classes['nav-bar']} ${isCloseSideDrawer ? classes['open'] : ''}`}>
-        <div className={classes['hamburger-content']} onClick={onChangeSideDrawer}>
+        <div className={classes['hamburger-content']} onClick={onToggleSideDrawer}>
           <Hamburger style={{ fontSize: '190%' }} className={classes['hamburger-logo']}/>
         </div>
         <div className={classes['user-name']}>
