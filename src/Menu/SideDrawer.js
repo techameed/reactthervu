@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { FaRegEye, FaDatabase } from "react-icons/fa";
 import { IoIosLogOut, IoIosSettings, } from "react-icons/io";
 import { GoChevronLeft } from "react-icons/go";
-import { MdTagFaces } from "react-icons/md";
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import { MdTagFaces, MdAssignment } from "react-icons/md";
 import classes from "./SideDrawer.css"
 import SideMenus from "../Menu/SideMenus.js";
+import * as Const from '../Constant.js';
 
 
 class SideDrawer extends Component {
@@ -25,13 +25,13 @@ class SideDrawer extends Component {
         { name: 'Logout', icon: IoIosLogOut }
       ],
       evaluator: [
-        { name: 'Evaluate', icon: AssignmentIcon },
+        { name: 'Evaluate', icon: MdAssignment},
         { name: 'Logout', icon: IoIosLogOut }
       ],
 
       showmenu: false,
 
-      user : 'admin',
+      user : Const.TRAINEE,
 
     };
   }
@@ -70,7 +70,7 @@ class SideDrawer extends Component {
         {
           user === 'admin' && (
             <>
-              <div className={classes.Collapsive_menu}>
+              <div className={classes.collapsive_menu}>
                   <FaDatabase className={classes.database_icon} />
                   <span className={classes.mainmenu}>                                                                                                   
                     Master Data
