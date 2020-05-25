@@ -30,8 +30,8 @@ class SideDrawer extends Component {
       ],
 
       showmenu: false,
-
-      user : Const.TRAINEE,
+      
+      user : Const.ADMIN,
 
     };
   }
@@ -74,7 +74,7 @@ class SideDrawer extends Component {
                   <FaDatabase className={classes.database_icon} />
                   <span className={classes.mainmenu}>                                                                                                   
                     Master Data
-                    <GoChevronLeft className={!this.state.showmenu ? classes.arrow_icon : classes.arrow}
+                    <GoChevronLeft className={`${classes.arrow_icon} ${this.state.showmenu && classes.arrow}`}
                                     onClick={this.showMenu} />
                   </span>
               </div>
