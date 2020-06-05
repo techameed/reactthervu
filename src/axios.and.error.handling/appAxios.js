@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const instance = axios.create({
+const ProtectedAxios = axios.create({
   base_url: ''
 });
 
-export default instance;
+export default ProtectedAxios;
