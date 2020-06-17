@@ -154,5 +154,6 @@ MultiSelectDropdown.propTypes = {
   disabled: PropTypes.bool,
   options: PropTypes.array,
   placeholder: PropTypes.string,
-  callBack: PropTypes.func
+  optionHeight: PropTypes.string,
+  callback: PropTypes.func
 }
