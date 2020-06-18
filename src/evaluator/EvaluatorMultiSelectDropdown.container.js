@@ -135,7 +135,8 @@ class MultiSelectDropdown extends Component {
       <div className={classes.dropdown}>
         {getInput()}
         {
-          isDropdownOpen && (
+          isDropdownOpen && 
+          !disabled (
             <div
               className={classes['options-list']}
               style={{ maxHeight: optionHeight }}>
