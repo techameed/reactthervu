@@ -3,26 +3,26 @@ import PropTypes from 'prop-types';
 import classes from './input.css';
 
 const Input = props => {
-	
-	const { 
+  
+  const { 
           id, 
           type, 
-          title, 
+          title,
           value, 
-          className, 
-          style,
           checked, 
           disabled, 
           placeholder, 
-          onChange 
+          onChange,
+          className,
+          style 
         } = props;
-	
-	return (
-	  <div className={classes.inputControl}>
-	    <input
-        id={id}
-        style={style}
+  
+  return (
+    <div className={classes.inputControl}>
+      <input
         className={className ? className : classes.input}
+        style={style}
+        id={id}
         type={type}
         title={title}
         disabled={disabled}
@@ -30,18 +30,17 @@ const Input = props => {
         checked={checked}
         onChange={onChange}
         placeholder={placeholder}/>
-	  	</div>
-	  );
+    </div>
+  );
 }
 
 Input.propTypes = {
-    title: PropTypes.any,
   type: PropTypes.string,
-	checked: PropTypes.bool,
-	disabled: PropTypes.bool,
-	value: PropTypes.any,
-	onChange: PropTypes.func,
-	placeholder: PropTypes.string,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
 };
 
 export default Input;
