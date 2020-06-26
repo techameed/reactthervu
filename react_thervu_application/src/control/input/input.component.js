@@ -31,7 +31,6 @@ const Input = props => {
 Input.propTypes = {
   type: PropTypes.string,
   checked: PropTypes.bool,
-  disabled: PropTypes.bool,
   value: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
