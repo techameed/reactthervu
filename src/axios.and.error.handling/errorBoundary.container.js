@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Modal from 'dialogBox.container';
+import Modal from './dialogBox.container';
 
-const errorBoundary = (wrappedComponent, axios) => {    
+const ErrorBoundary = (WrappedComponent, axios) => {    
  
   return class extends Component {
     state = {
@@ -17,17 +17,24 @@ const errorBoundary = (wrappedComponent, axios) => {
       });
     }
 
+    onCloseModal = () => {
+      this.setState({ error: null })
+    }
+
     render() {
       const { error } = this.state;
 
       return (
-        <>
-          <Modal show={error} >
-            {error && error.message}
-          </Modal>
-          <wrappedComponent {...this.props} />
-        </>
+        <React.Fragment>
+          <Modal show={Boolean(error)} 
+            onCloseModal={this.onCloseModal}
+            content={error && error.message} 
+          />
+          <WrappedComponent {...this.props} />
+        </React.Fragment>
       ); 
     }
   }
 }
+
+export default ErrorBoundary;
